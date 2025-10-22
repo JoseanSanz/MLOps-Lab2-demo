@@ -41,7 +41,7 @@ COPY --from=builder /usr/local /usr/local
 
 # Copiar el código fuente
 COPY fastapi_main.py .
-COPY gradio_main.py .
+COPY app.py .
 COPY mylib ./mylib
 COPY templates ./templates
 
