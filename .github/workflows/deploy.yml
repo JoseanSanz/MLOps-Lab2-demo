@@ -8,7 +8,10 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository (with submodules)
+        uses: actions/checkout@v4 
+        with:
+          submodules: true
 
       - name: Set up QEMU (for buildx)
         uses: docker/setup-qemu-action@v3
