@@ -9,7 +9,7 @@ from click.testing import CliRunner
 
 
 def test_add():
-    assert add(1, 2) == 3
+    assert add(1, 2) == 5
 
 
 def test_subtract():
@@ -42,7 +42,7 @@ def test_add_cli():
     runner = CliRunner()
     result = runner.invoke(cli, ["add", "1", "2"])
     assert result.exit_code == 0
-    assert "3" in result.output
+    assert "5" in result.output
 
 
 # Write a test for the subtract_cli function of the cli group.

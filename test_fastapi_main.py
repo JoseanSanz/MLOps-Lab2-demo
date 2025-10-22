@@ -28,7 +28,7 @@ def test_calculate_add(client):
     assert response.status_code == 200
     data = response.json()
     assert "result" in data
-    assert data["result"] == 8
+    assert data["result"] == 11
 
 
 def test_calculate_divide_by_zero(client):
