@@ -9,7 +9,7 @@ from click.testing import CliRunner
 
 
 def test_add():
-    assert add(1, 2) == 5
+    assert add(1, 2) == 3
 
 
 def test_subtract():
@@ -78,4 +78,4 @@ def test_power_cli():
     runner = CliRunner()
     result = runner.invoke(cli, ["power", "2", "3"])
     assert result.exit_code == 0
-    assert "5" in result.output
+    assert "8" in result.output
