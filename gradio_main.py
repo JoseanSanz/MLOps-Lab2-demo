@@ -6,6 +6,7 @@ import requests
 # URL de tu API FastAPI
 API_URL = "http://127.0.0.1:8000/calculate"
 
+
 # Función que se ejecuta al presionar "Calcular"
 def calcular(a, b, operacion):
     try:
@@ -16,6 +17,7 @@ def calcular(a, b, operacion):
         return data.get("result")
     except requests.exceptions.HTTPError as e:
         return f"Error: {response.json().get('detail', str(e))}"
+
 
 # Crear interfaz Gradio
 iface = gr.Interface(
