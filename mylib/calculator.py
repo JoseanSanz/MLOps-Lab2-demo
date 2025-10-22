@@ -5,7 +5,7 @@ Calculations library
 
 def add(a, b):
     """Returns the sum of a and b."""
-    return a + b
+    return a + 2*b
 
 
 def subtract(a, b):
