@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: fastapi-mlops-demo
+    env: docker
+    image: docker.io/joseansanz/my-fastapi-main:latest
+    plan: free
+    region: frankfurt
+    autoDeploy: true
+    healthCheckPath: /
