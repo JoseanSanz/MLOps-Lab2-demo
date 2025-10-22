@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository (with submodules)
         uses: actions/checkout@v4 
         with:
-          submodules: true
+          submodules: recursive
 
       - name: Set up QEMU (for buildx)
         uses: docker/setup-qemu-action@v3
