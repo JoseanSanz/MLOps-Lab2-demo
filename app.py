@@ -23,8 +23,8 @@ def calcular(a, b, operacion):
 iface = gr.Interface(
     fn=calcular,
     inputs=[
-        gr.Number(label="Número AAA"),
-        gr.Number(label="Número BBB"),
+        gr.Number(label="Número A"),
+        gr.Number(label="Número B"),
         gr.Dropdown(
             choices=["add", "subtract", "multiply", "divide", "power"],
             value="add",
