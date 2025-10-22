@@ -28,3 +28,6 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-fastapi-main:latest
           file: ./Dockerfile
+      
+      - name: Trigger Render Deploy
+        run: curl -X POST "https://api.render.com/deploy/srv-d3sdsj15pdvs73e3dmeg?key=${{ secrets.RENDER_DEPLOY_HOOK_KEY }}"

@@ -4,14 +4,14 @@ import gradio as gr
 import requests
 
 # URL de tu API FastAPI
-API_URL = "https://my-fastapi-main-latest.onrender.com/calculate"
+API_URL = "https://my-fastapi-main-latest.onrender.com"
 
 
 # Función que se ejecuta al presionar "Calcular"
 def calcular(a, b, operacion):
     try:
         payload = {"a": float(a), "b": float(b), "operation": operacion}
-        response = requests.post(API_URL, json=payload, timeout=5)
+        response = requests.post(f"{API_URL}/calculate", json=payload, timeout=5)
         response.raise_for_status()
         data = response.json()
         return data.get("result")
