@@ -71,4 +71,4 @@ def calculate(data: CalcRequest):
 
 # Punto de entrada (solo para ejecución directa)
 if __name__ == "__main__":
-    uvicorn.run("fastapi_main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("fastapi_main:app", host="127.0.0.1", port=8000, reload=True)

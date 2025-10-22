@@ -4,7 +4,7 @@ import gradio as gr
 import requests
 
 # URL de tu API FastAPI
-API_URL = "http://127.0.0.1:8000/calculate"
+API_URL = "https://my-fastapi-main-latest.onrender.com/calculate"
 
 
 # Función que se ejecuta al presionar "Calcular"
