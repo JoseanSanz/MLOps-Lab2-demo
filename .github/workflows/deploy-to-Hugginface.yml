@@ -2,8 +2,7 @@ name: Deploy Gradio app to Hugging Face Space
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
     paths:
       - "app.py"           # solo se ejecuta si cambia app.py
       - "requirements.txt"  # o requirements.txt
