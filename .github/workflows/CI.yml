@@ -30,7 +30,9 @@ jobs:
           ref: main
       
       - name: Switch to hf-space branch
-        run: git checkout hf-space
+        run: |
+          git fetch origin hf-space
+          git checkout hf-space
       
       - name: Add Hugging Face remote
         env:
