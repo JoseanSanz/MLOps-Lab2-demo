@@ -6,10 +6,10 @@ test:
 	uv run python -m pytest ./tests -vv --cov=main --cov=mylib #test_*.py
 
 format:	
-	uv run black mylib/*.py api/*.py cli/*.py tests/*.py app/*.py #*.py 
+	uv run black mylib/*.py api/*.py cli/*.py tests/*.py #*.py 
 
 lint:
-	uv run pylint --disable=R,C --ignore-patterns=test_.*\.py mylib/*.py api/*.py cli/*.py tests/*.py app/*.py  #*.py 
+	uv run pylint --disable=R,C --ignore-patterns=test_.*\.py mylib/*.py api/*.py cli/*.py tests/*.py  #*.py 
 
 #container-lint:
 #	docker run --rm -i hadolint/hadolint < Dockerfile
