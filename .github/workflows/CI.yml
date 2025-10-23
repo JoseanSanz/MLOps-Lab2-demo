@@ -31,7 +31,7 @@ jobs:
       
       - name: Fetch and switch to hf-space branch
         run: |
-          git fetch origin hf-space:main
+          git fetch origin hf-space:hf-space
           git checkout hf-space
       
       - name: Add Hugging Face remote
