@@ -23,6 +23,7 @@ iface = gr.Interface(
     inputs=[
         gr.Number(label="Número A"),
         gr.Number(label="Número B"),
+        gr.Number(label="Número C"),
         gr.Dropdown(
             choices=["add", "subtract", "multiply", "divide", "power"],
             value="add",
