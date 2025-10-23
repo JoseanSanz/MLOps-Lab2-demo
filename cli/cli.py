@@ -1,8 +1,7 @@
-#!/usr/bin/env python
-
 """
 Main CLI or app entry point
 """
+
 import click
 from mylib.calculator import add, subtract, multiply, divide, power
 

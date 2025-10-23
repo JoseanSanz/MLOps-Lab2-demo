@@ -2,7 +2,7 @@
 import io
 import json
 import pytest
-from fastapi_main import app
+from api.fastapi_main import app
 from PIL import Image
 from fastapi.testclient import TestClient
 

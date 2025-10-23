@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "app.py"           # solo se ejecuta si cambia app.py
+      - "requirements.txt"  # o requirements.txt
       - ".github/workflows/deploy-to-hf.yml"
 
 jobs:
@@ -29,7 +30,8 @@ jobs:
           git config --global user.name "github-actions"
           git clone https://Antuanin:${HF_TOKEN}@huggingface.co/spaces/Antuanin/MLOps-Lab2-demo hf-space
           cp app.py hf-space/
+          cp requirements.txt hf-space/
           cd hf-space
-          git add app.py
+          git add app.py requirements.txt
           git commit -m "Update app.py automatically from GitHub Actions" || echo "No changes to commit"
           git push origin main

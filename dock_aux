@@ -40,7 +40,8 @@ FROM base AS runtime
 COPY --from=builder /usr/local /usr/local
 
 # Copiar el código fuente
-COPY api ./api
+COPY fastapi_main.py .
+COPY app.py .
 COPY mylib ./mylib
 COPY templates ./templates
 
@@ -51,4 +52,4 @@ RUN mkdir -p /app/uploads
 EXPOSE 8000
 
 # Comando por defecto: iniciar FastAPI con uvicorn
-CMD ["uvicorn", "api.fastapi_main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "fastapi_main:app", "--host", "0.0.0.0", "--port", "8000"]
