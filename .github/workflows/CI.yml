@@ -19,3 +19,14 @@ jobs:
         run: make lint
       - name: test
         run: make test
+  hf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: git remote
+        run: git remote add huggingface https://huggingface.co/spaces/USERNAME/REPO.git
+      - name: cambio rama hf-space
+        run: git checkout hf-space
+      - name: push huggingface
+        run: git push -f huggingface hf-space:main
+
