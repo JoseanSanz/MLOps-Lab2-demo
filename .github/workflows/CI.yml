@@ -24,7 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: git remote
-        run: git remote add huggingface https://huggingface.co/spaces/USERNAME/REPO.git
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_USERNAME: ${{ secrets.HF_USERNAME }}
+        run: git remote add huggingface https://huggingface.co/spaces/${HF_USERNAME}/MLOps-Lab2-demo.git
       - name: cambio rama hf-space
         run: git checkout hf-space
       - name: push huggingface
