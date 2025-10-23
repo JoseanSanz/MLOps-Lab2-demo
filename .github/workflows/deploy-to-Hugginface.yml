@@ -8,6 +8,7 @@ on:
       - "app.py"           # solo se ejecuta si cambia app.py
       - "requirements.txt"  # o requirements.txt
       - ".github/workflows/deploy-to-hf.yml"
+  workflow_dispatch:
 
 jobs:
   deploy:
