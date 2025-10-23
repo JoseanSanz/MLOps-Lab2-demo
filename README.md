@@ -1,8 +1,10 @@
-[![CI](https://github.com/JoseanSanz/MLOps-Lab2-demo/actions/workflows/CI.yml/badge.svg)](https://github.com/JoseanSanz/MLOps-Lab2-demo/actions/workflows/CI.yml)
-
-[![Build and push Docker image](https://github.com/JoseanSanz/MLOps-Lab2-demo/actions/workflows/deploy.yml/badge.svg)](https://github.com/JoseanSanz/MLOps-Lab2-demo/actions/workflows/deploy.yml)
-
-[![Deploy Gradio app to Hugging Face Space](https://github.com/JoseanSanz/MLOps-Lab2-demo/actions/workflows/deploy-to-Hugginface.yml/badge.svg)](https://github.com/JoseanSanz/MLOps-Lab2-demo/actions/workflows/deploy-to-Hugginface.yml)
-
-# MLOps-Lab2-demo
-Demo for the second lab of the MLOps subject
+title: MLOps Lab2 Demo
+emoji: 📉
+colorFrom: indigo
+colorTo: yellow
+sdk: gradio
+sdk_version: 5.49.1
+app_file: app.py
+pinned: false
+license: mit
+short_description: Space for the demo of the second lab of the MLOps subject
