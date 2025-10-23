@@ -27,9 +27,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # necesario para acceder a otras ramas (hf-space)
+          ref: main
       
-      - name: Switch to hf-space branch
-        run: git checkout hf-space
+      - name: Fetch and switch to hf-space branch
+        run: |
+          git fetch origin hf-space:main
+          git checkout hf-space
       
       - name: Add Hugging Face remote
         env:
