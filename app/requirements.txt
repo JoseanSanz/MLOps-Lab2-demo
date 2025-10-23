@@ -1,2 +1,2 @@
-gradio
-request
+gradio>=3.40
+requests>=2.30
