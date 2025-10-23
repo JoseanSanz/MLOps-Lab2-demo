@@ -21,12 +21,13 @@ jobs:
         run: make test
   hf:
     runs-on: ubuntu-latest
-    needs: build # solo se ejecuta si build pasa
+    needs: build   # solo se ejecuta si build pasa
     steps:
       - name: Checkout repository with all branches
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0  # necesario para acceder a otras ramas (hf-space)
+      
       - name: Switch to hf-space branch
         run: git checkout hf-space
       
@@ -38,4 +39,3 @@ jobs:
 
       - name: Push hf-space branch to Hugging Face
         run: git push huggingface hf-space:main --force
-
