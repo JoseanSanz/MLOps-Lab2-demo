@@ -9,7 +9,7 @@ API_URL = "https://calculator-api-latest-r081.onrender.com"
 def calcular(a, b, operacion):
     try:
         payload = {"a": float(a), "b": float(b), "op": operacion}
-        response = requests.post(f"{API_URL}/calculate", json=payload, timeout=5)
+        response = requests.post(f"{API_URL}/calculate", data=payload, timeout=5)
         response.raise_for_status()
         data = response.json()
         return data.get("result")
