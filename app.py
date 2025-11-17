@@ -3,7 +3,7 @@ import requests
 
 # URL of the API created with FastAPI
 # API_URL = "https://my-fastapi-main-latest.onrender.com"
-API_URL = "https://calculator-latest.onrender.com"
+API_URL = "https://calculator-api-latest.onrender.com"
 
 
 # Function to execute when clicking the "Compute button"
