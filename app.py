@@ -2,8 +2,7 @@ import gradio as gr
 import requests
 
 # URL of the API created with FastAPI
-# API_URL = "https://my-fastapi-main-latest.onrender.com"
-API_URL = "https://calculator-api-latest.onrender.com"
+API_URL = "https://calculator-api-latest-r081.onrender.com"
 
 
 # Function to execute when clicking the "Compute button"
